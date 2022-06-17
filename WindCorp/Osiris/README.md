@@ -1,4 +1,4 @@
-# [Osiris](https://tryhackme.com/room/osiris) - WriteUp
+# [Osiris](https://tryhackme.com/room/osiris) Writeup 
 
 Difficulty: **INSANE**
 
