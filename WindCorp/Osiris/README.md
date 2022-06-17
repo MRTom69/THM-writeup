@@ -575,7 +575,7 @@ But for the second tool `CQMasterKeyAD.exe` I can't find it anywhere, and only a
 ---
 Back to enumeration, we found a KeePass database in `chajoh` Documents `Database.kdbx`
 
-we can the config file in `C:\Users\chajoh\AppData\Roaming\KeePass\KeePass.config.xml` and it is using the user `chajoh` as a MasterKey (DPAPI) 
+we can view the config file in `C:\Users\chajoh\AppData\Roaming\KeePass\KeePass.config.xml` and it is using the user `chajoh` as a MasterKey (DPAPI) 
 ```
     <KeySources>
       <Association>
@@ -673,7 +673,7 @@ RID       : 00000573 (1395)
 User      : WINDCORP\alcrez
 MsCacheV2 : d314d29973862ad7d8166ba7999cbf2d
 ```
-After overwrite the hash we need to note the NTLM password hash `d314d29973862ad7d8166ba7999cbf2d`
+After overwrite the hash we need to note the password NTLM hash `d314d29973862ad7d8166ba7999cbf2d`
 
 But if we do this, we can no longer access the KeePass database even if we are login as chajoh because the KeePass database is protected by DPAPI (Data Protection API)
 
