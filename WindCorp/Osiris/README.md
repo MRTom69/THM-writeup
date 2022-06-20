@@ -675,9 +675,9 @@ MsCacheV2 : d314d29973862ad7d8166ba7999cbf2d
 ```
 After overwrite the hash we need to note the password NTLM hash `d314d29973862ad7d8166ba7999cbf2d`
 
-But if we do this, we can no longer access the KeePass database even if we are login as chajoh because the KeePass database is protected by DPAPI (Data Protection API)
+But if we do this, we can no longer access the KeePass database even if we are login as `chajoh` because the KeePass database is protected by DPAPI (Data Protection API)
 
-The MasterKey in DPAPI were encrypted using the user password, so when we overwrite the password, the MasterKey can no longer unlock
+The MasterKey in DPAPI was encrypted using `chajoh` password, so when we overwrite her password, the MasterKey can no longer unlock
 
 So now we need to recreate the user MasterKey with the Backup DPAPI Key from their domain controller: [Ra](https://tryhackme.com/room/ra)
 
@@ -862,4 +862,6 @@ Lastly, we need to run this command to make sure the new MasterKey is set with t
 ```
 attrib "c:\users\chajoh\appdata\roaming\microsoft\protect\S-1-5-21-555431066-3599073733-176599750-1125\a773eede-71b6-4d66-b4b8-437e01749caa" +S +H
 ```
-Once done, we can just login as "windcorp/chajoh" and open the KeePass database and get the third and final flag
+Once done, we can just login as "windcorp/chajoh", and open the KeePass database and get the third and final flag.
+
+Note if you can't login as "windcorp/chajoh" in Linux, try using the "remote desktop connection" in windows
